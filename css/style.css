@@ -2,6 +2,7 @@
 
 *{
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
@@ -13,41 +14,62 @@
 .section-page-header {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: 1fr 50px fit-content;
     grid-template-areas: 
     "hd . ct"
     "sb sb sb"
     "li li li";
     margin-right: 2vw;
     margin-left: 2vw;
+    margin-top: 2vh;
 }
 
 .section-page-header a {
     grid-area: hd;
-    background-color: aqua;
     font-size: 50px;
     width: fit-content;
-
+    color: black;
 }
 
 .section-page-header .section-cart {
     grid-area: ct;
-    background-color: rgb(70, 156, 53);
     display: flex;
     align-items: flex-end;
     flex-direction: column;
 }
 
-.section-page-header input {
-    grid-area: sb;
-    height: 100px;
-    width:80%;
-    background-color: rgb(177, 49, 182);
+.section-page-header .section-cart img {
+    font-size: 45px;
 }
 
-.section-page-header .section-links {
+.section-page-header input {
+    grid-area: sb;
+    height: 35px;
+    width:96vw;
+    margin-top: 1vh;
+}
+
+.section-links {
     grid-area: li;
     display: flex;
-    align-items:center;
+    align-items:flex-start;
     justify-content: space-evenly;
+    height: min-content;
+}
+
+.section-links a {
+    font-size: 18px;
+}
+
+.section-promo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 300px;
+    background-color: blue;
+}
+
+.section-promo img {
+    max-width: ;
 }
