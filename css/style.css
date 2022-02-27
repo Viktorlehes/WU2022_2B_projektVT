@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Grid for header */
+
+.section-page-header {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "hd . ct"
+    "sb sb sb"
+    "li li li";
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.section-page-header a {
+    grid-area: hd;
+    background-color: aqua;
+    font-size: 50px;
+    width: fit-content;
+
+}
+
+.section-page-header .section-cart {
+    grid-area: ct;
+    background-color: rgb(70, 156, 53);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.section-page-header input {
+    grid-area: sb;
+    height: 100px;
+    width:80%;
+    background-color: rgb(177, 49, 182);
+}
+
+.section-page-header .section-links {
+    grid-area: li;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
